@@ -96,4 +96,35 @@ final class SortingTests: XCTestCase {
         //assert
         XCTAssertEqual(actual,expected)
     }
+    
+    
+    
+    func testQuickSortWithRandoArray(){
+        //arrange
+        let sorting = Sorting()
+        let data = [9,4,8,3,2,5,1,0,7]
+        let expected = [0,1,2,3,4,5,7,8,9]
+        //act
+        let actual = sorting.MergeSort(data)
+        //assert
+        XCTAssertEqual(actual,expected)
+        
+    }
+    
+    func testbogoSortWithRandoArray(){
+        //arrange
+        let sorting = Sorting()
+        let data = [9,4,8,3,2,5,1,0,7]
+        let expected = [0,1,2,3,4,5,7,8,9]
+        //act
+        let actual = sorting.bogoSort(data)
+        //assert
+        XCTAssertEqual(actual,expected)
+    
 }
+}
+
+    
+
+
+

@@ -42,11 +42,74 @@ class Sorting{
                 sortedArray.append(secondArray[SecondIndex])
                 SecondIndex += 1
             }
+            else{
+                sortedArray.append(firstArray[FirstIndex])
+                FirstIndex += 1
+                sortedArray.append(secondArray[SecondIndex])
+                SecondIndex += 1
+                
+            }
         }
         sortedArray.append(contentsOf: firstArray[FirstIndex...])
         sortedArray.append(contentsOf: secondArray[SecondIndex...])
         
         return sortedArray
     }
+    
+    func quickSort(_ array: [Int]) -> [Int]{
+        
+        var bodgeArray = array
+        
+        for _ in 0..<array.count{
+            bodgeArray = quickSortBodge(bodgeArray)
+        }
+        return bodgeArray
+    }
+    
+    func quickSortBodge(_ array: [Int]) -> [Int]{
+        
+        let pivot = array[0]
+        
+        var left = [Int]()
+        var right = [Int]()
+        
+        for i in 1..<array.count{
+            if array[i] < pivot{
+                left.append(array[i])
+            }
+            else if array[i] > pivot{
+                right.append(array[i])
+            }
+        }
+        var sortedArray = [Int]()
+        
+        sortedArray.append(contentsOf: left)
+        sortedArray.append(pivot)
+        sortedArray.append(contentsOf: right)
+        
+        return sortedArray
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    func bogoSort(_ array: [Int]) -> [Int]{
+        
+        let expectedArray = MergeSort(array)
+        var sortedArray = array
+        
+        while array != expectedArray {
+            sortedArray.shuffle()
+            print(sortedArray)
+        }
+        return sortedArray
+    }
+    
 }
-
