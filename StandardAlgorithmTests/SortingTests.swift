@@ -114,8 +114,8 @@ final class SortingTests: XCTestCase {
     func testbogoSortWithRandoArray(){
         //arrange
         let sorting = Sorting()
-        let data = [2,3,4,1]
-        let expected = [1,2,3,4]
+        let data = [9,4,8,3,2,5,1,0,7]
+        let expected = [0,1,2,3,4,5,7,8,9]
         //act
         let actual = sorting.bogoSort(data)
         //assert

@@ -105,9 +105,14 @@ class Sorting{
         let expectedArray = MergeSort(array)
         var sortedArray = array
         
-        while array != expectedArray {
-            sortedArray.shuffle()
+        while true {
             print(sortedArray)
+            if sortedArray == expectedArray{
+                break
+            }
+            else{
+                sortedArray.shuffle()
+            }
         }
         return sortedArray
     }
