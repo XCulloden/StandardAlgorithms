@@ -122,6 +122,32 @@ final class SortingTests: XCTestCase {
         XCTAssertEqual(actual,expected)
     
 }
+    
+    
+    func testBubbleSortWithRandoArray(){
+        //arrange
+        let sorting = Sorting()
+        let data = [9,4,8,3,2,5,1,0,7]
+        let expected = [0,1,2,3,4,5,7,8,9]
+        //act
+        let actual = sorting.BubbleSort(data)
+        //assert
+        XCTAssertEqual(actual,expected)
+    
+}
+    
+    func testIsSortedWithrandArray(){
+        //arrange
+        let sorting = Sorting()
+        let data = [9,4,8,3,2,5,1,0,7]
+        let data2 = [0,1,2,3,4,5,7,8,9]
+        //act
+        
+        //assert
+        print(sorting.IsSorted(data))
+        print(sorting.IsSorted(data2))
+    
+}
 }
 
     

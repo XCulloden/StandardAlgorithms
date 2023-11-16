@@ -117,4 +117,32 @@ class Sorting{
         return sortedArray
     }
     
+    func IsSorted(_ array: [Int]) -> Bool{
+        var array = array
+        var sorted = false
+        for i in 0..<array.count{
+            if array[i]+1 < array[i]{
+                sorted = false
+            }
+            else if array[i] + 1 == array[i]{
+                
+            }
+            if i == array.count{
+                sorted = true
+            }
+        }
+        return sorted
+    }
+    
+    
+    func BubbleSort(_ array: [Int]) -> [Int]{
+        var Array = array
+        for i in 0..<Array.count - 1{
+            if Array[i+1] <= Array[i]{
+                Array.swapAt(i, i+1)
+                print(Array)
+            }
+        }
+        return Array
+    }
 }
