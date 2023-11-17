@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0444192B07D14500801C8B /* searching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0444182B07D14500801C8B /* searching.swift */; };
 		5B0C2C952AFE950400235793 /* SortingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0C2C942AFE950400235793 /* SortingTests.swift */; };
 		5B0C2C972AFE965D00235793 /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0C2C962AFE965D00235793 /* Sorting.swift */; };
 		5B0C2C982AFE971200235793 /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0C2C962AFE965D00235793 /* Sorting.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B0444182B07D14500801C8B /* searching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searching.swift; sourceTree = "<group>"; };
 		5B0C2C942AFE950400235793 /* SortingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingTests.swift; sourceTree = "<group>"; };
 		5B0C2C962AFE965D00235793 /* Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorting.swift; sourceTree = "<group>"; };
 		5B94D4CD2AFA482B00EAE8C6 /* StandardAlgorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StandardAlgorithms; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,7 @@
 			children = (
 				5B94D4D02AFA482B00EAE8C6 /* main.swift */,
 				5B0C2C962AFE965D00235793 /* Sorting.swift */,
+				5B0444182B07D14500801C8B /* searching.swift */,
 			);
 			path = StandardAlgorithms;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B0C2C972AFE965D00235793 /* Sorting.swift in Sources */,
+				5B0444192B07D14500801C8B /* searching.swift in Sources */,
 				5B94D4D12AFA482B00EAE8C6 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

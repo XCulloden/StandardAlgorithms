@@ -6,3 +6,18 @@
 //
 
 import Foundation
+class Searching{
+    
+    func BinarySearch(_ array: [Int],_ target: Int) -> String{
+        for i in 0...array.count{
+            if array[i] == target{
+                return "item found at array index \(i)"
+            }
+            
+           
+        }
+            return "item was not found"
+            
+
+    }
+}
