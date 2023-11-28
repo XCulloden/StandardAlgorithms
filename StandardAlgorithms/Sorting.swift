@@ -7,16 +7,10 @@
 
 import Foundation
 
-class Sorting{
-    func bubbleSort(_ data: [Int]) -> [Int] {
-        if data[0] == 2{
-            return[1,2,3,4,7]
-        }
-        return [1,3,4,5,7]
-    }
+class Sorting {
     
     func MergeSort(_ array: [Int]) -> [Int] {
-        guard array.count > 1 else{
+        guard array.count > 1 else {
             return array
         }
         
@@ -27,124 +21,99 @@ class Sorting{
         return sortArrays(firstArray, secondArray)
     }
     
-    func sortArrays(_ firstArray: [Int], _ secondArray: [Int]) -> [Int]{
+    func sortArrays(_ firstArray: [Int], _ secondArray: [Int]) -> [Int] {
         var sortedArray = [Int]()
         var FirstIndex = 0
         var SecondIndex = 0
         
-        
-        while  FirstIndex < firstArray.count && SecondIndex < secondArray.count{
-            if firstArray[FirstIndex] < secondArray[SecondIndex]{
+        while FirstIndex < firstArray.count && SecondIndex < secondArray.count {
+            if firstArray[FirstIndex] < secondArray[SecondIndex] {
                 sortedArray.append(firstArray[FirstIndex])
                 FirstIndex += 1
-            }
-            else if secondArray[SecondIndex] < firstArray[FirstIndex]{
+            } else if secondArray[SecondIndex] < firstArray[FirstIndex] {
                 sortedArray.append(secondArray[SecondIndex])
                 SecondIndex += 1
-            }
-            else{
+            } else {
                 sortedArray.append(firstArray[FirstIndex])
                 FirstIndex += 1
                 sortedArray.append(secondArray[SecondIndex])
                 SecondIndex += 1
-                
             }
+            print(sortedArray)
         }
+        
         sortedArray.append(contentsOf: firstArray[FirstIndex...])
         sortedArray.append(contentsOf: secondArray[SecondIndex...])
         
         return sortedArray
     }
     
-    func quickSort(_ array: [Int]) -> [Int]{
-        
+    func quickSort(_ array: [Int]) -> [Int] {
         var bodgeArray = array
         
-        for _ in 0..<array.count{
+        for _ in 0..<array.count {
             bodgeArray = quickSortBodge(bodgeArray)
+            print(bodgeArray)
         }
         return bodgeArray
     }
     
-    func quickSortBodge(_ array: [Int]) -> [Int]{
-        
+    func quickSortBodge(_ array: [Int]) -> [Int] {
         let pivot = array[0]
-        
         var left = [Int]()
         var right = [Int]()
         
-        for i in 1..<array.count{
-            if array[i] < pivot{
+        for i in 1..<array.count {
+            if array[i] < pivot {
                 left.append(array[i])
-            }
-            else if array[i] > pivot{
+            } else if array[i] > pivot {
                 right.append(array[i])
             }
         }
-        var sortedArray = [Int]()
         
+        var sortedArray = [Int]()
         sortedArray.append(contentsOf: left)
         sortedArray.append(pivot)
         sortedArray.append(contentsOf: right)
         
         return sortedArray
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     }
     
-    func bogoSort(_ array: [Int]) -> [Int]{
-        
-        let expectedArray = MergeSort(array)
-        var sortedArray = array
-        
-        while true {
-            print(sortedArray)
-            if sortedArray == expectedArray{
-                break
-            }
-            else{
-                sortedArray.shuffle()
-            }
-        }
-        return sortedArray
-    }
-    
-//    func IsSorted(_ array: [Int]) -> Bool{
-//        var sorted = false
-//        for i in 1..<array.count{
-//            
-//            if array[i-1] > array[i]{
-//                sorted = false
-//            }
-//            else if array[i] + 1 == array[i]{
-//                
-//            }
-//            if i == array.count-1{
-//                sorted = true
-//            }
-//            
-//        }
-//        return sorted
-//    }
-    
-    
-    func BubbleSort(_ array: [Int]) -> [Int]{
+    func BubbleSort(_ array: [Int]) -> [Int] {
         var Array = array
-        for i in 0..<(Array.count){
-            if Array[i+1] <= Array[i]{
-                Array.swapAt(i, i+1)
-                
+        
+        for i in 0..<(Array.count) {
+            for x in 0..<array.count - 1 - i {
+                if Array[x+1] <= Array[x] {
+                    Array.swapAt(x, x+1)
+                    print(Array)
+                }
             }
-            print(Array)
         }
+        
         return Array
+    }
+    
+    func InsertionSort(_ array: [Int]) -> [Int] {
+        var array = array
+        
+        if array.count > 1 {
+            for x in 1..<array.count {
+                let compVal = array[x]
+                var y = x - 1
+                
+                while y >= 0 && compVal < array[y] {
+                    array[y + 1] = array[y]
+                    y -= 1
+                    print(array)
+                }
+                
+                array[y + 1] = compVal
+            }
+            
+            return array
+        } else {
+            return array
+        }
     }
 }
